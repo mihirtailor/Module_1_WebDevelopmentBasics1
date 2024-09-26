@@ -2,16 +2,24 @@
 <html>
   <head>
     <title>Table Assigment</title>
+    <!-- exteernal style sheet -->
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <style>
       table {
         border: 2px solid black;
       }
+      td {
+        background-color: skyblue;
+        color: blue;
+        border: 2px solid black;
+      }
     </style>
     <table border="1">
       <thead>
-        <tr>
+        <tr style="background-color: orangered; color: purple">
+          <!-- Instyle style example -->
           <th>ID</th>
           <th>FirstName</th>
           <th>LastName</th>
@@ -21,7 +29,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
+        <tr style="background-color: skyblue">
           <td>1</td>
           <td>John</td>
           <td>Doe</td>
@@ -71,5 +79,45 @@
         </tr>
       </tbody>
     </table>
+
+    <div>
+      Colspan Example
+      <table>
+        <tr>
+          <th>ID</th>
+          <th colspan="2">Name</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>John</td>
+          <td>Doe</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Dave</td>
+          <td>Mill</td>
+        </tr>
+      </table>
+    </div>
+
+    <div>
+      Rowspan Example
+      <table>
+        <tr>
+          <th>ID</th>
+          <th>FirstName</th>
+          <th>LastName</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td rowspan="2">John</td>
+          <td rowspan="2">Doe</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>hello</td>
+        </tr>
+      </table>
+    </div>
   </body>
 </html>
