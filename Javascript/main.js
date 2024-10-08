@@ -160,3 +160,12 @@ function sum(a, b) {
 var result = sum(10, 20);
 // Calling the function
 console.log("Sum: ", result);
+
+for (var fruit of fruits) {
+  if (fruit === "Banana") {
+    break;
+  }
+  console.log("Fruit: ", fruit);
+}
+
+// forEach method
