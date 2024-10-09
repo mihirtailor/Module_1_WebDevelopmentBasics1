@@ -44,8 +44,35 @@
 
       @media not screen and (max-width: 450px) {
         .card {
-          background-color: blue;
-          color: yellow;
+          background-color: lightgray;
+          color: black;
+        }
+      }
+
+      /* Orientation */
+      @media screen and (orientation: landscape) {
+        body {
+          background-color: lightgreen;
+        }
+      }
+
+      @media screen and (orientation: portrait) {
+        body {
+          background-color: lightblue;
+        }
+      }
+
+      /* Aspect Ratio */
+      @media screen and (aspect-ratio: 1/2) {
+        body {
+          background-color: lightcoral;
+        }
+      }
+
+      /* height */
+      @media screen and (min-height: 400px) {
+        body {
+          background-color: navajowhite;
         }
       }
     </style>
