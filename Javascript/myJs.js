@@ -138,3 +138,16 @@ sayHello();
 for (var i = 0; i < anotherArray.length; i++) {
   console.log("Name: " + anotherArray[i]);
 }
+
+// switch
+var day = "Monday";
+switch (day) {
+  case "Monday":
+    console.log("Today is Monday");
+    break;
+  case "Tuesday":
+    console.log("Today is Tuesday");
+    break;
+  case "Wednesday":
+    console.log("Today is Wednesday");
+}
