@@ -20,6 +20,8 @@
         height: 100px;
         background-color: red;
         border: 1px solid black;
+        position: relative;
+        top: 10px;
       }
 
       span.c {
@@ -29,9 +31,33 @@
         background-color: red;
         border: 1px solid black;
       }
+
+      /* position */
+      /* absolue is relative to the nearest positioned parent */
+      h1 {
+        /* position: absolute; */
+        bottom: 0px;
+        left: 20px;
+      }
+
+      div.relative {
+        position: relative;
+        width: 400px;
+        height: 200px;
+        background-color: lightblue;
+        border: 2px solid green;
+      }
+      div.absolute {
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        width: 200px;
+        height: 100px;
+        border: 1px solid black;
+      }
     </style>
   </head>
-  <body>
+  <body style="position: relative">
     <h1>Web Layout</h1>
     <p>
       Traditional flow of HTML elemtns are to be stacked on top of each other.
@@ -50,5 +76,14 @@
       <strong> Inline-block</strong> elements are those that flow with the text
       and also <span class="c">maintain their size and shape.</span>
     </p>
+
+    <div class="relative">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste excepturi
+      ratione voluptas repellendus qui perferendis similique consectetur vero
+      obcaecati? Inventore nemo accusamus illum?
+      <div class="absolute">
+        Dolor architecto dolores sapiente explicabo, placeat quibusdam.
+      </div>
+    </div>
   </body>
 </html>
