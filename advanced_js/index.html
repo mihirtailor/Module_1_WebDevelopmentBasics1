@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced Javascript</title>
+    <script>
+      function testSubmit(event) {
+        console.log("form submitted");
+        // get the form data
+        var formData = document.forms["signInForm"];
+        console.log(formData);
+        var username = formData["username"].value;
+        var password = formData["password"].value;
+        console.log(username, password);
+
+        // display username on page
+        var resultDiv = document.getElementById("result");
+        resultDiv.innerHTML = "<p>Username:  " + username + "</p>";
+        resultDiv.style.color = "red";
+        resultDiv.style.backgroundColor = "lightblue";
+        resultDiv.style.fontSize = "20px";
+
+        // prevent default from submission/page reload
+        event.preventDefault();
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Advanced Javascript</h1>
+    <!-- event keyword is the submission object -->
+    <form name="signInForm" onsubmit="testSubmit(event)" action="">
+      <label for="username">Username</label>
+      <input type="text" name="username" id="username" />
+
+      <br />
+      <label for="password">password</label>
+      <input type="password" name="password" id="password" />
+      <br />
+      <button type="submit">Submit</button>
+    </form>
+
+    <div id="result"></div>
+  </body>
+</html>
