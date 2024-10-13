@@ -14,6 +14,12 @@ This project demonstrates a simple JavaScript function that calculates the sum o
 2. Click the "Click me!" button on the page.
 3. Open the browser's developer console to see the result.
 
+## Live Preview
+
+You can view the live version of the JavaScript Function Demo here:
+
+[JavaScript Function Demo Preview](https://mihirtailor.github.io/bootcamp/module_assessment/js_function)
+
 ## How it works
 
 The HTML file contains a button with an `onclick` attribute that calls the `myFunction()` JavaScript function when clicked. The function calculates the sum of numbers from 1 to 100 using a for loop and then logs the result to the console.
