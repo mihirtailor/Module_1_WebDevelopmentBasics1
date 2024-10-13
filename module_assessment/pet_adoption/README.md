@@ -6,7 +6,7 @@ This is a simple pet adoption website showcasing available pets in a table forma
 
 You can view the live version of the Robogarden Pet Shelter here:
 
-[Robogarden Pet Shelter Preview](https://your-github-username.github.io/path-to-your-project/module_assessment/pet_adoption/)
+[Robogarden Pet Shelter Preview](https://mihirtailor.github.io/bootcamp/module_assessment/pet_adoption/)
 
 ## Technologies Used
 
