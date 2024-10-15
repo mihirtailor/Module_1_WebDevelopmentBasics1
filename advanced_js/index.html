@@ -22,11 +22,21 @@
         console.log(username, password);
 
         // display username on page
-        var resultDiv = document.getElementById("result");
+        // accessing DOM elements,
+        //var resultDiv = document.getElementById("result");
+        //var resultDiv = document.getElementsByTagName("div")[1];
+        var resultDiv = document.getElementsByClassName("card-body")[0];
+
+        // Changed the html page, innerHTML property
         resultDiv.innerHTML = "<p>Username:  " + username + "</p>";
+
+        // added some attributes with style property
         resultDiv.style.color = "red";
         resultDiv.style.backgroundColor = "lightblue";
         resultDiv.style.fontSize = "20px";
+
+        // set attributes to the element
+        resultDiv.setAttribute("data-result", "result");
 
         // prevent default from submission/page reload
         event.preventDefault();
