@@ -4,6 +4,16 @@ $(document).ready(function () {
   // $ is used to access JQuery library
   // $("form").submit(function(event)
   //var formData = document.forms["signInForm"];
+  var result = $(".card-body");
+  result.hide();
+
+  // select panel
+  var panel_1 = $("#panel_1");
+  var panel_2 = $("#panel_2");
+  var panel_3 = $("#panel_3");
+
+  panel_2.hide();
+
   $("#signInForm").on("submit", function (event) {
     //get username by id
     var username = $("#username").val();
@@ -22,35 +32,45 @@ $(document).ready(function () {
 
     // set attributes to the element
     result.attr("data-custom", "custome value");
+
+    // show the result div
+    // result.show();
+    result.slideDown(1500);
+
+    panel_1.animate({ right: "100" }, "slow");
+    panel_2.fadeIn(1500);
+
+    panel_3.fadeToggle(1500);
+
     event.preventDefault();
   });
-
-  // function testSubmit(event) {
-  //   console.log("form submitted");
-
-  //   console.log(formData);
-  //   var username = formData["username"].value;
-  //   var password = formData["password"].value;
-  //   console.log(username, password);
-
-  //   // display username on page
-  //   // accessing DOM elements,
-  //   //var resultDiv = document.getElementById("result");
-  //   //var resultDiv = document.getElementsByTagName("div")[1];
-  //   var resultDiv = document.getElementsByClassName("card-body")[0];
-
-  //   // Changed the html page, innerHTML property
-  //   resultDiv.innerHTML = "<p>Username:  " + username + "</p>";
-
-  //   // added some attributes with style property
-  //   resultDiv.style.color = "red";
-  //   resultDiv.style.backgroundColor = "lightblue";
-  //   resultDiv.style.fontSize = "20px";
-
-  //   // set attributes to the element
-  //   resultDiv.setAttribute("data-result", "result");
-
-  //   // prevent default from submission/page reload
-
-  // }
 });
+
+// function testSubmit(event) {
+//   console.log("form submitted");
+
+//   console.log(formData);
+//   var username = formData["username"].value;
+//   var password = formData["password"].value;
+//   console.log(username, password);
+
+//   // display username on page
+//   // accessing DOM elements,
+//   //var resultDiv = document.getElementById("result");
+//   //var resultDiv = document.getElementsByTagName("div")[1];
+//   var resultDiv = document.getElementsByClassName("card-body")[0];
+
+//   // Changed the html page, innerHTML property
+//   resultDiv.innerHTML = "<p>Username:  " + username + "</p>";
+
+//   // added some attributes with style property
+//   resultDiv.style.color = "red";
+//   resultDiv.style.backgroundColor = "lightblue";
+//   resultDiv.style.fontSize = "20px";
+
+//   // set attributes to the element
+//   resultDiv.setAttribute("data-result", "result");
+
+//   // prevent default from submission/page reload
+
+// }
