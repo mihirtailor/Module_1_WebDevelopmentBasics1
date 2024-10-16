@@ -1,0 +1,56 @@
+$(document).ready(function () {
+  // get the form data
+  // JQuery Syntax
+  // $ is used to access JQuery library
+  // $("form").submit(function(event)
+  //var formData = document.forms["signInForm"];
+  $("#signInForm").on("submit", function (event) {
+    //get username by id
+    var username = $("#username").val();
+
+    // get div element by class name
+    var result = $(".card-body");
+    result.html("<p>Username:  " + username + "</p>");
+
+    // updating css properties
+    result.css("color", "red");
+    result.css("font-size", "20px");
+    result.css("font-weight", "bold");
+    result.css("font-style", "italic");
+    result.css("font-family", "Arial");
+    result.css("background-color", "yellow");
+
+    // set attributes to the element
+    result.attr("data-custom", "custome value");
+    event.preventDefault();
+  });
+
+  // function testSubmit(event) {
+  //   console.log("form submitted");
+
+  //   console.log(formData);
+  //   var username = formData["username"].value;
+  //   var password = formData["password"].value;
+  //   console.log(username, password);
+
+  //   // display username on page
+  //   // accessing DOM elements,
+  //   //var resultDiv = document.getElementById("result");
+  //   //var resultDiv = document.getElementsByTagName("div")[1];
+  //   var resultDiv = document.getElementsByClassName("card-body")[0];
+
+  //   // Changed the html page, innerHTML property
+  //   resultDiv.innerHTML = "<p>Username:  " + username + "</p>";
+
+  //   // added some attributes with style property
+  //   resultDiv.style.color = "red";
+  //   resultDiv.style.backgroundColor = "lightblue";
+  //   resultDiv.style.fontSize = "20px";
+
+  //   // set attributes to the element
+  //   resultDiv.setAttribute("data-result", "result");
+
+  //   // prevent default from submission/page reload
+
+  // }
+});

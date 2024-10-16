@@ -11,43 +11,20 @@
       crossorigin="anonymous"
     />
 
-    <script>
-      function testSubmit(event) {
-        console.log("form submitted");
-        // get the form data
-        var formData = document.forms["signInForm"];
-        console.log(formData);
-        var username = formData["username"].value;
-        var password = formData["password"].value;
-        console.log(username, password);
+    <!-- JQuery script first so it is availabe to the rest of the scripts -->
+    <script
+			  src="https://code.jquery.com/jquery-3.7.1.min.js"
+			  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+			  crossorigin="anonymous"></script>
 
-        // display username on page
-        // accessing DOM elements,
-        //var resultDiv = document.getElementById("result");
-        //var resultDiv = document.getElementsByTagName("div")[1];
-        var resultDiv = document.getElementsByClassName("card-body")[0];
-
-        // Changed the html page, innerHTML property
-        resultDiv.innerHTML = "<p>Username:  " + username + "</p>";
-
-        // added some attributes with style property
-        resultDiv.style.color = "red";
-        resultDiv.style.backgroundColor = "lightblue";
-        resultDiv.style.fontSize = "20px";
-
-        // set attributes to the element
-        resultDiv.setAttribute("data-result", "result");
-
-        // prevent default from submission/page reload
-        event.preventDefault();
-      }
+    <script src="main.js"></script>>
     </script>
   </head>
   <body>
     <main class="container">
       <h1>Advanced Javascript</h1>
       <!-- event keyword is the submission object -->
-      <form name="signInForm" onsubmit="testSubmit(event)" action="">
+      <form id="signInForm" onsubmit="testSubmit(event)" action="">
         <label class="form-label" for="username">Username</label>
         <input class="form-control" type="text" name="username" id="username" />
 
