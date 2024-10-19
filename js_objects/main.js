@@ -69,5 +69,5 @@ document.getElementById("username").innerHTML =
 document.getElementById("age").innerHTML =
   "<span>Age: " + person3.age + "</span>";
 document.getElementById("isMarried").innerHTML =
-  "<span>Married: " + person3.isMarried + "</span>";
+  "<span>Married: " + person3.isMarried ? "yes" : "no" + "</span>";
 x;
