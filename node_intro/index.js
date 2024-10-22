@@ -29,13 +29,20 @@ var http = require("http");
 // ./filename: this means current folder
 // ../filename: this means parent folder
 // /filename: this means root folder
-const log = require("./logger");
+// we import the class definition of the Logger class
+const logger = require("./logger");
+const LoggerInstance = new logger();
+
+LoggerInstance.on("messageLogged", (arg) => {
+  console.log("Listener called", arg);
+});
 
 http
   .createServer(
     // take a callback function as an argument, this callback function will have access to the request and response objects
     function (req, res) {
-      log("request received into database");
+      LoggerInstance.log("request received");
+
       // write response for the client
       res.writeHead(200, { "Content-Type": "application/json" });
       res.write('{ "name": "John Doe", "age": 30 }');
