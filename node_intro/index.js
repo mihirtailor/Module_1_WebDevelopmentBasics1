@@ -25,11 +25,17 @@ console.log(os.totalmem());
 console.log(os.freemem());
 
 var http = require("http");
+// import log function from logger.js
+// ./filename: this means current folder
+// ../filename: this means parent folder
+// /filename: this means root folder
+const log = require("./logger");
 
 http
   .createServer(
     // take a callback function as an argument, this callback function will have access to the request and response objects
     function (req, res) {
+      log("request received into database");
       // write response for the client
       res.writeHead(200, { "Content-Type": "application/json" });
       res.write('{ "name": "John Doe", "age": 30 }');
