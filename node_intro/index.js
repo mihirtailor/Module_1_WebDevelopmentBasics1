@@ -50,3 +50,14 @@ http
   )
   .listen(8080); // listen for requests on port 8080
 // ports are like doors to a house, they are the entry points to a server
+
+// npm install will create a node_modules folder and install dependeencies in that folder
+// npm uninstall will remove a dependency from the node_modules folder
+// npm install -g <package-name> will install a package globally
+// npm install -g <package-name>@<version> will install a specific version of a package
+// npm update will update all dependencies
+
+// Semantiv Versioning: major.minor.patch
+// major: breaking changes minor: new features patch: bug fixes
+//  Caret (^) allows minor and patch updates
+//  Tilde (~) allows patch updates
