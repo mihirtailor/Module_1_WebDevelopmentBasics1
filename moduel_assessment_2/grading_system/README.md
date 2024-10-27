@@ -12,7 +12,3 @@ Check out the live preview of the project here: [Grading/Attendance System Live 
 - Interactive grading system
 - Attendance tracking
 - Modern UI with hover effects and smooth transitions
-
-  ```
-
-  ```
