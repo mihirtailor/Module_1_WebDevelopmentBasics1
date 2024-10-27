@@ -13,9 +13,6 @@ Check out the live preview of the project here: [Grading/Attendance System Live 
 - Attendance tracking
 - Modern UI with hover effects and smooth transitions
 
-## Installation
+  ```
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/grading-attendance-system.git
-   ```
+  ```
