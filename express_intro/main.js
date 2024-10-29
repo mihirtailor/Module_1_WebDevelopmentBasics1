@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+var figlet = require("figlet");
 
 function custom_middleware(req, res, next) {
   console.log("Custom middleware called");
@@ -74,4 +75,14 @@ app.delete("/users/:id", (req, res) => {
   res.send(user, 200);
 });
 
-app.listen(3001, () => console.log("Listening on port 3001"));
+app.listen(3001, () => {
+  figlet("Hello World!!", function (err, data) {
+    if (err) {
+      console.log("Something went wrong...");
+      console.dir(err);
+      return;
+    }
+    console.log(data);
+  });
+  console.log("Listening on port 3001");
+});
