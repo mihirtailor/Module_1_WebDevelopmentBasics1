@@ -51,8 +51,19 @@ CREATE TABLE users (
 ALTER TABLE users
 ADD password VARCHAR(255);
 
+-- Modifying users table
+ALTER TABLE users
+MODIFY COLUMN name VARCHAR(255) NOT NULL;
+
+-- Modifying column name in users table
+ALTER TABLE users
+CHANGE COLUMN name first_name VARCHAR(255);
+
 -- Dropping users table
 -- DROP TABLE users;
+
+-- removing all data records from users table
+-- TRUNCATE TABLE users;
 
 
 -- What are the differnet types of data in sql?
@@ -67,3 +78,13 @@ ADD password VARCHAR(255);
 
 
 -- Data Manipulation language(DML)
+-- Inserting data into users table
+INSERT INTO users(id,first_name, email, age, password)
+VALUES(1, 'John', 'john@gmail.com', 25, '123456');
+
+-- Inserting multiple data into users table
+INSERT INTO users(id,first_name, email, age, password)
+VALUES(2, 'Jane', 'jane@gmail.com', 25, '123456'),
+      (3, 'Jack', 'jack@gmail.com', 25, '123456'),
+      (4, 'Jill', 'jill@gmail.com', 25, '123456');
+
