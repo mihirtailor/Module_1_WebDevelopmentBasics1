@@ -3,7 +3,7 @@ $(document).ready(function () {
   // JQuery Syntax
   // $ is used to access JQuery library
   // $("form").submit(function(event)
-  //var formData = document.forms["signInForm"];
+  var formData = document.forms["signInForm"];
   var result = $(".card-body");
   result.hide();
 
@@ -17,6 +17,24 @@ $(document).ready(function () {
   $("#signInForm").on("submit", function (event) {
     //get username by id
     var username = $("#username").val();
+
+    // submit from data to API server using ajax
+    // ajax standd for asynchronous javascript and xml
+    $.ajax({
+      url: "http://localhost:3000/customers",
+      type: "POST",
+      contentType: "application/json",
+      data: {
+        name: username,
+        age: 25,
+      },
+      success: function (response) {
+        console.log("Success: ", response);
+      },
+      failure: function (response) {
+        log("Failure: ", response);
+      },
+    });
 
     // get div element by class name
     var result = $(".card-body");
@@ -46,31 +64,29 @@ $(document).ready(function () {
   });
 });
 
-// function testSubmit(event) {
-//   console.log("form submitted");
+function testSubmit(event) {
+  console.log("form submitted");
 
-//   console.log(formData);
-//   var username = formData["username"].value;
-//   var password = formData["password"].value;
-//   console.log(username, password);
+  var username = document.getElementById("username").value;
+  var password = document.getElementById("password").value;
+  console.log(username, password);
 
-//   // display username on page
-//   // accessing DOM elements,
-//   //var resultDiv = document.getElementById("result");
-//   //var resultDiv = document.getElementsByTagName("div")[1];
-//   var resultDiv = document.getElementsByClassName("card-body")[0];
+  // display username on page
+  // accessing DOM elements,
+  //var resultDiv = document.getElementById("result");
+  //var resultDiv = document.getElementsByTagName("div")[1];
+  var resultDiv = document.getElementsByClassName("card-body")[0];
 
-//   // Changed the html page, innerHTML property
-//   resultDiv.innerHTML = "<p>Username:  " + username + "</p>";
+  // Changed the html page, innerHTML property
+  resultDiv.innerHTML = "<p>Username:  " + username + "</p>";
 
-//   // added some attributes with style property
-//   resultDiv.style.color = "red";
-//   resultDiv.style.backgroundColor = "lightblue";
-//   resultDiv.style.fontSize = "20px";
+  // added some attributes with style property
+  resultDiv.style.color = "red";
+  resultDiv.style.backgroundColor = "lightblue";
+  resultDiv.style.fontSize = "20px";
 
-//   // set attributes to the element
-//   resultDiv.setAttribute("data-result", "result");
+  // set attributes to the element
+  resultDiv.setAttribute("data-result", "result");
 
-//   // prevent default from submission/page reload
-
-// }
+  // prevent default from submission/page reload
+}

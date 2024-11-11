@@ -88,3 +88,9 @@ VALUES(2, 'Jane', 'jane@gmail.com', 25, '123456'),
       (3, 'Jack', 'jack@gmail.com', 25, '123456'),
       (4, 'Jill', 'jill@gmail.com', 25, '123456');
 
+-- selecting all data from users table
+SELECT * FROM users;
+
+-- what is a primary key?
+-- A primary key is a column or a set of columns that uniquely identifies each row in a table.
+
